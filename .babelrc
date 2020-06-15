@@ -1,0 +1,26 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": "./",
+        "alias": {
+          "controllers": "./controllers",
+          "middlewares": "./middlewares",
+          "models": "./models",
+          "routes": "./routes"
+        }
+      }
+    ]
+  ],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ]
+}
