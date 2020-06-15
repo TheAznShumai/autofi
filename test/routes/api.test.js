@@ -12,21 +12,21 @@ describe("Api Testing", () => {
     done();
   });
 
-  it("POST /api/v1/import should import csv data WITH header format", async (done) => {
-    const response = await request(app)
-      .post("/api/v1/import")
-      .attach("file", "test/fixtures/withHeader.csv")
-      .field("provider", "withHeader")
-      .expect(200);
-    done();
-  });
+  // it("POST /api/v1/import should import csv data WITH header format", async (done) => {
+  //   const response = await request(app)
+  //     .post("/api/v1/import")
+  //     .attach("file", "test/fixtures/withHeader.csv")
+  //     .field("provider", "withHeader")
+  //     .expect(200);
+  //   done();
+  // });
 
-  it("POST /api/v1/import should import csv data WITHOUT header format", async (done) => {
-    const response = await request(app)
-      .post("/api/v1/import")
-      .field("provider", "withoutHeader")
-      .attach("file", "test/fixtures/withoutHeader.csv")
-      .expect(200);
-    done();
-  });
+  // it("POST /api/v1/import should import csv data WITHOUT header format", async (done) => {
+  //   const response = await request(app)
+  //     .post("/api/v1/import")
+  //     .field("provider", "withoutHeader")
+  //     .attach("file", "test/fixtures/withoutHeader.csv")
+  //     .expect(200);
+  //   done();
+  // });
 });
